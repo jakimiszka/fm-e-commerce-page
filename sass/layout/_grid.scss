@@ -1,0 +1,8 @@
+@use "../util" as u;
+@use '../globals' as g;
+
+.container {
+    width: 90%;
+    max-width: g.$max-width;
+    margin: 0 auto;
+}

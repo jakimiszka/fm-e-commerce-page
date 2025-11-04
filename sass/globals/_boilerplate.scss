@@ -1,0 +1,17 @@
+@use '../util' as u;
+
+html{
+    box-sizing: border-box;         /* padding and border are included in the width */ 
+    font-size: 100%;                /* default browser font-size is 16px */
+} 
+
+*, *:before, *:after {
+    box-sizing: inherit;            /* inherit box-sizing from html */
+}
+
+body{  
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100%;
+}
