@@ -1,5 +1,14 @@
 :root{
+    --black: black;
+    --white: white;
+    --grey-50: hsl(223, 35%, 81%);
+    --grey-100: hsl(219, 35%, 92%);
+    --grey-300: hsl(221, 22%, 81%);
+    --grey-500: hsl(219, 9%, 45%);
+    --grey-950: hsl(220, 13%, 13%);
 
+    --orange-300: hsl(25, 100%, 71%);
+    --orange-500: hsl(26, 100%, 55%);
 }
 
 [data-theme="dark"] {

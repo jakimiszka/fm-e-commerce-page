@@ -1,0 +1,77 @@
+@font-face {
+  font-family: "Rubik-Italic-static";
+  src: url("https://jakimiszka.github.io/fm-quiz/assets/assets/fonts/static/Rubik-Italic.ttf") format("truetype");
+  font-weight: 200;
+}
+@font-face {
+  font-family: "Rubik-Medium-static";
+  src: url("https://jakimiszka.github.io/fm-quiz/assets/assets/fonts/static/Rubik-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Rubik-Regular-static";
+  src: url("https://jakimiszka.github.io/fm-quiz/assets/assets/fonts/static/Rubik-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Rubik-Italic";
+  src: url("https://jakimiszka.github.io/fm-quiz/assets/assets/fonts/Rubik-Italic-VariableFont_wght.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Rubik";
+  src: url("https://jakimiszka.github.io/fm-quiz/assets/assets/fonts/Rubik-VariableFont_wght.ttf") format("truetype");
+}
+html {
+  box-sizing: border-box; /* padding and border are included in the width */
+  font-size: 100%; /* default browser font-size is 16px */
+}
+
+*, *:before, *:after {
+  box-sizing: inherit; /* inherit box-sizing from html */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100%;
+}
+
+h1 {
+  margin: 0;
+  font-weight: 200;
+}
+
+h2, h3 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+a,
+a:visited,
+a:active {
+  text-decoration: none;
+}
+
+:root {
+  --black: black;
+  --white: white;
+  --grey-50: hsl(223, 35%, 81%);
+  --grey-100: hsl(219, 35%, 92%);
+  --grey-300: hsl(221, 22%, 81%);
+  --grey-500: hsl(219, 9%, 45%);
+  --grey-950: hsl(220, 13%, 13%);
+  --orange-300: hsl(25, 100%, 71%);
+  --orange-500: hsl(26, 100%, 55%);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1rem;
+}
+
+.navigation {
+  background-color: red;
+}/*# sourceMappingURL=styles.css.map */
