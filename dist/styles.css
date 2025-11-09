@@ -66,12 +66,95 @@ a:active {
   --orange-500: hsl(26, 100%, 55%);
 }
 
+/*  Mobile first  */
 .container {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 1rem;
 }
 
 .navigation {
   background-color: red;
+}
+
+.quantity_box {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--grey-100);
+  gap: 3rem;
+  border-radius: 10px;
+  padding: 1rem 0.5rem;
+}
+.quantity_box--minus, .quantity_box--plus {
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  padding-inline: 0.5rem;
+}
+.quantity_box--minus:hover, .quantity_box--plus:hover {
+  filter: brightness(0.8);
+}
+.quantity_box--number {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: var(--grey-950);
+}
+
+.chart_button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--orange-500);
+  color: var(--grey-950);
+  gap: 1rem;
+  border-radius: 10px;
+  padding: 1rem 4rem;
+  font-size: 1rem;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.chart_button:hover {
+  background-color: var(--orange-300);
+}
+
+.chart_button img {
+  filter: brightness(1%) contrast(100%);
+}
+
+.gallery img {
+  border-radius: 10px;
+  cursor: pointer;
+  object-fit: cover;
+}
+
+.gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 600px;
+  margin-inline: auto;
+}
+.gallery--main_image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.gallery--thumbnails {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+}
+.gallery--thumbnail {
+  flex: 1;
+  aspect-ratio: 1;
+}
+.gallery--thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }/*# sourceMappingURL=styles.css.map */

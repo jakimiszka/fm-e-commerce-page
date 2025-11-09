@@ -1,9 +1,13 @@
 @use "../util" as u;
 @use '../globals' as g;
 
+
+/*  Mobile first  */
 .container {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: u.$spacing-200;
 }
 
