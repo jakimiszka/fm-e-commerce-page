@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <title>Frontend Mentor | E-commerce product page</title>
   <link rel="stylesheet" href="./dist/styles.css">
@@ -16,7 +16,7 @@
         Abouta
         Contact
       </nav>
-      
+
       <div class="quantity_box">
         <div class="quantity_box--minus">
           <img src="./images/icon-minus.svg" alt="minus icon">
@@ -51,27 +51,50 @@
           </div>
         </div>
       </div>
+
+        <div class="cart">
+          <h2>Cart</h2>
+          <div class="cart--line"></div>
+          <div class="cart--content">
+            <!-- <p>Your cart is empty.</p> -->
+            <div class="cart--content--item">
+              <div class="cart--content--item_image">
+                <img src="./images/image-product-1-thumbnail.jpg" alt="sneaker thumbnail in cart">
+              </div>
+              <div class="cart--content--item_description">
+                <p>Fall Limited Edition Sneakers</p>
+                <p>$125.00 x 3 <span class="cart--item_total_price">$375.00</span></p>
+              </div>
+              <div class="cart--content--item_delete">
+                <img src="./images/icon-delete.svg" alt="delete icon">
+              </div>
+            </div>
+            <button class="chart_button">Checkout</button>
+          </div>
+        </div>
   </div>
   
 
 
-  Sneaker Company
 
-  Fall Limited Edition Sneakers
-
-  These low-profile sneakers are your perfect casual wear companion. Featuring a 
-  durable rubber outer sole, they’ll withstand everything the weather can offer.
-
-  $125.00
-  50%
-  $250.00
-
-  0
-  Add to cart
+  <h3>Sneaker Company</h3>
+  <h1>Fall Limited Edition Sneakers</h1>
+  <p>
+    These low-profile sneakers are your perfect casual wear companion. Featuring a 
+    durable rubber outer sole, they’ll withstand everything the weather can offer.
+  </p>
   
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+  <div class="pricing">
+    <div class="pricing--new_price">
+      $125.00
+    </div>
+    <div class="pricing--discount">
+      50%
+    </div>
+    <div class="pricing--old_price">
+      $250.00
+    </div>
   </div>
+  
 </body>
 </html>
