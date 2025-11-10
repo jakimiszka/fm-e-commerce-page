@@ -75,10 +75,6 @@ a:active {
   gap: 1rem;
 }
 
-.navigation {
-  background-color: red;
-}
-
 .quantity_box {
   display: inline-flex;
   align-items: center;
@@ -133,11 +129,16 @@ a:active {
 }
 
 .gallery {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 2rem;
   max-width: 600px;
   margin-inline: auto;
+}
+.gallery--main_image {
+  display: flex;
+  align-items: center;
 }
 .gallery--main_image img {
   width: 100%;
@@ -202,4 +203,54 @@ a:active {
 .cart--content--item_delete img {
   width: 25px;
   height: 25px;
+}
+
+.gallery_navigation {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  position: absolute;
+  padding: 1rem;
+}
+.gallery_navigation--previous, .gallery_navigation--next {
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  padding-inline: 0.5rem;
+  border-radius: 50%;
+  background-color: var(--white);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.gallery_navigation--previous:hover, .gallery_navigation--next:hover {
+  filter: brightness(0.8);
+}
+.gallery_navigation--previous img, .gallery_navigation--next img {
+  width: 12px;
+  height: 12px;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 60%;
+}
+.navigation--links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+.navigation--icons {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.navigation--avatar img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
 }/*# sourceMappingURL=styles.css.map */
