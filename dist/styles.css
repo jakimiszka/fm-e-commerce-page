@@ -54,6 +54,11 @@ a:active {
   text-decoration: none;
 }
 
+ul {
+  margin: 0;
+  padding: 0;
+}
+
 :root {
   --black: black;
   --white: white;
@@ -73,6 +78,7 @@ a:active {
   justify-content: center;
   align-items: center;
   gap: 1rem;
+  width: 100%;
 }
 
 .quantity_box {
@@ -235,14 +241,54 @@ a:active {
 
 .navigation {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  width: 60%;
+  width: 100%;
 }
-.navigation--links {
+.navigation--logo {
   display: flex;
-  gap: 2rem;
+  align-items: center;
+  gap: 1rem;
+}
+.navigation--logo_menu {
+  width: 20px;
+  height: auto;
+  cursor: pointer;
+}
+@media (min-width: 1024px) {
+  .navigation--logo_menu {
+    display: none;
+  }
+}
+.navigation--links[data-mobile=active] {
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 0;
+  height: 100%;
+  min-width: 30%;
+  z-index: 10;
+  background-color: var(--grey-100);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   list-style: none;
+}
+.navigation--links[data-mobile=inactive] {
+  display: none;
+}
+@media (min-width: 820px) {
+  .navigation--links[data-mobile=inactive] {
+    display: none;
+  }
+}
+@media (min-width: 1024px) {
+  .navigation--links[data-mobile=inactive] {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
 }
 .navigation--icons {
   display: flex;
