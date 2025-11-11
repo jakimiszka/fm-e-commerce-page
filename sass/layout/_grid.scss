@@ -9,5 +9,22 @@
     justify-content: center;
     align-items: center;
     gap: u.$spacing-200;
-    width: 100%;
+    max-width: 1110px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main_content{
+    display: flex;
+    flex-direction: row;
+    gap: u.$spacing-400;
+    padding: u.$spacing-400;
+}
+
+.product-details{
+    display: flex;
+    flex-direction: column;
+    gap: u.$spacing-200;
+    max-width: 445px;
+    order: 1;
 }
