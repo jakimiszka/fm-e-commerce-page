@@ -31,14 +31,14 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: hsla(240, 53%, 23%, 0.9);
-    opacity: 0.5;
+    background-color: hsla(0, 0%, 0%, 0.8);
     pointer-events: none;
     visibility: visible;
     z-index: 5;
 
     @include u.breakpoint(large){
-        visibility: hidden !important;
+        display: none;
+        visibility: hidden;
     }
 }
 

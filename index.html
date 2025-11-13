@@ -97,10 +97,12 @@
 
         <div class="gallery">
           <div class="gallery--main_image" data-product="3">
-            <img data-id='1' data-product="true" src="./images/image-product-1.jpg" alt="...">
-            <img data-id='2' data-product="false" src="./images/image-product-2.jpg" alt="...">
-            <img data-id='3' data-product="false" src="./images/image-product-3.jpg" alt="...">
-            <img data-id='4' data-product="false" src="./images/image-product-4.jpg" alt="...">
+            <div class="gallery--main_image-all">
+              <img data-id='1' data-product="true" src="./images/image-product-1.jpg" alt="...">
+              <img data-id='2' data-product="false" src="./images/image-product-2.jpg" alt="...">
+              <img data-id='3' data-product="false" src="./images/image-product-3.jpg" alt="...">
+              <img data-id='4' data-product="false" src="./images/image-product-4.jpg" alt="...">
+            </div>
             <div class="gallery_navigation">
               <div class="gallery_navigation--previous">
                 <img src="./images/icon-previous.svg" alt="previous icon">
@@ -112,20 +114,25 @@
           </div>
           <div class="gallery--thumbnails">
             <div class="gallery--thumbnail">
-              <img data-id='1' src="./images/image-product-1-thumbnail.jpg" alt="sneaker thumbnail 1">
+              <img data-id='1' data-selected="true" src="./images/image-product-1-thumbnail.jpg" alt="sneaker thumbnail 1">
             </div>
             <div class="gallery--thumbnail">
-              <img data-id='2' src="./images/image-product-2-thumbnail.jpg" alt="sneaker thumbnail 2">
+              <img data-id='2' data-selected="false" src="./images/image-product-2-thumbnail.jpg" alt="sneaker thumbnail 2">
             </div>
             <div class="gallery--thumbnail">
-              <img data-id='3' src="./images/image-product-3-thumbnail.jpg" alt="sneaker thumbnail 3">
+              <img data-id='3' data-selected="false" src="./images/image-product-3-thumbnail.jpg" alt="sneaker thumbnail 3">
             </div>
             <div class="gallery--thumbnail">
-              <img data-id='4' src="./images/image-product-4-thumbnail.jpg" alt="sneaker thumbnail 4">
+              <img data-id='4' data-selected="false" src="./images/image-product-4-thumbnail.jpg" alt="sneaker thumbnail 4">
             </div>
           </div>
         </div>
       </div>
+  </div>
+  <div class="preview-container">
+    <div class="gallery--close">
+            <img src="./images/icon-close.svg" alt="close icon">
+          </div>
   </div>
   <script defer src="./script.js"></script>
 </body>

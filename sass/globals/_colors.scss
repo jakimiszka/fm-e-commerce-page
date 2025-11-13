@@ -10,11 +10,20 @@
     --orange-300: hsl(25, 100%, 71%);
     --orange-500: hsl(26, 100%, 55%);
 
-    [data-product='false'] {
+    [data-product='true'] {
         display: flex;
     }
 
     [data-product='false'] {
         display: none;
+    }
+
+    [data-selected='true'] {
+        border: 2px solid var(--orange-500);
+        opacity: 0.5;
+    }
+    [data-selected='false'] {
+        border: none;
+        opacity: 1;
     }
 }
