@@ -11,14 +11,32 @@
   <div class="container">
     <div class="overlay"></div>
     <nav class="navigation">
+      <div class="cart">
+          <h2>Cart</h2>
+          <div class="cart--line"></div>
+          <div class="cart--content">
+            <p class="cart--content--empty">Your cart is empty.</p>
+            <div class="cart--content--item">
+              <div class="cart--content--item_image">
+                <img src="./images/image-product-1-thumbnail.jpg" alt="sneaker thumbnail in cart">
+              </div>
+              <div class="cart--content--item_description">
+                <p>Fall Limited Edition Sneakers</p>
+                <p>$125.00 x 3 <span class="cart--item_total_price">$375.00</span></p>
+              </div>
+              <div class="cart--content--item_delete">
+                <img src="./images/icon-delete.svg" alt="delete icon">
+              </div>
+            </div>
+            <button class="chart_button">Checkout</button>
+          </div>
+        </div>
       <div class="navigation--logo">
         <img src="./images/icon-menu.svg" alt="menu icon" class="navigation--logo_menu">
         <img src="./images/logo.svg" alt="sneaker logo">
       </div>
-      <div class="navigation--links" data-mobile="active">
-        <div class="navigation--links--close">
-          <img src="./images/icon-close.svg" alt="close icon">
-        </div>
+      <div class="navigation--links">
+        <img src="./images/icon-close.svg" alt="close icon">
         <ul>
           <li>Collections</li>
           <li>Men</li>
@@ -46,22 +64,43 @@
             These low-profile sneakers are your perfect casual wear companion. Featuring a 
             durable rubber outer sole, they’ll withstand everything the weather can offer.
           </p>
-          <div class="pricing">
-            <div class="pricing--new_price">
-              $125.00
+          <div class="product-details--pricing">
+            <div class="product-details--pricing__new">
+              <div class="product-details--pricing__new--new_price">
+                $125.00
+              </div>
+              <div class="product-details--pricing__new--discount">
+                50%
+              </div>
             </div>
-            <div class="pricing--discount">
-              50%
-            </div>
-            <div class="pricing--old_price">
+           
+            <div class="product-details--pricing__old">
               $250.00
             </div>
           </div>
+          <div class="buttons_wrapper">
+            <div class="quantity_box">
+            <div class="quantity_box--minus">
+              <img src="./images/icon-minus.svg" alt="minus icon">
+            </div>
+            <div class="quantity_box--number">0</div>
+            <div class="quantity_box--plus">
+              <img src="./images/icon-plus.svg" alt="plus icon">
+            </div>
+            </div>
+              <button class="chart_button">
+                <img src="./images/icon-cart.svg" alt="cart icon">
+                Add to cart
+              </button>
+            </div>
         </div>
 
         <div class="gallery">
-          <div class="gallery--main_image">
-            <img src="./images/image-product-1.jpg" alt="sneaker main image">
+          <div class="gallery--main_image" data-product="3">
+            <img data-id='1' data-product="true" src="./images/image-product-1.jpg" alt="...">
+            <img data-id='2' data-product="false" src="./images/image-product-2.jpg" alt="...">
+            <img data-id='3' data-product="false" src="./images/image-product-3.jpg" alt="...">
+            <img data-id='4' data-product="false" src="./images/image-product-4.jpg" alt="...">
             <div class="gallery_navigation">
               <div class="gallery_navigation--previous">
                 <img src="./images/icon-previous.svg" alt="previous icon">
@@ -73,56 +112,21 @@
           </div>
           <div class="gallery--thumbnails">
             <div class="gallery--thumbnail">
-              <img src="./images/image-product-1-thumbnail.jpg" alt="sneaker thumbnail 1">
+              <img data-id='1' src="./images/image-product-1-thumbnail.jpg" alt="sneaker thumbnail 1">
             </div>
             <div class="gallery--thumbnail">
-              <img src="./images/image-product-2-thumbnail.jpg" alt="sneaker thumbnail 2">
+              <img data-id='2' src="./images/image-product-2-thumbnail.jpg" alt="sneaker thumbnail 2">
             </div>
             <div class="gallery--thumbnail">
-              <img src="./images/image-product-3-thumbnail.jpg" alt="sneaker thumbnail 3">
+              <img data-id='3' src="./images/image-product-3-thumbnail.jpg" alt="sneaker thumbnail 3">
             </div>
             <div class="gallery--thumbnail">
-              <img src="./images/image-product-4-thumbnail.jpg" alt="sneaker thumbnail 4">
+              <img data-id='4' src="./images/image-product-4-thumbnail.jpg" alt="sneaker thumbnail 4">
             </div>
           </div>
         </div>
       </div>
-    
-        <!-- <div class="cart">
-          <h2>Cart</h2>
-          <div class="cart--line"></div>
-          <div class="cart--content">
-            <p>Your cart is empty.</p>
-            <div class="cart--content--item">
-              <div class="cart--content--item_image">
-                <img src="./images/image-product-1-thumbnail.jpg" alt="sneaker thumbnail in cart">
-              </div>
-              <div class="cart--content--item_description">
-                <p>Fall Limited Edition Sneakers</p>
-                <p>$125.00 x 3 <span class="cart--item_total_price">$375.00</span></p>
-              </div>
-              <div class="cart--content--item_delete">
-                <img src="./images/icon-delete.svg" alt="delete icon">
-              </div>
-            </div>
-            <button class="chart_button">Checkout</button>
-          </div>
-        </div> -->
-
-        <!-- <div class="quantity_box">
-        <div class="quantity_box--minus">
-          <img src="./images/icon-minus.svg" alt="minus icon">
-        </div>
-        <div class="quantity_box--number">0</div>
-        <div class="quantity_box--plus">
-          <img src="./images/icon-plus.svg" alt="plus icon">
-        </div>
-      </div>
-
-      <button class="chart_button">
-        <img src="./images/icon-cart.svg" alt="cart icon">
-        Add to cart
-      </button> -->
   </div>
+  <script defer src="./script.js"></script>
 </body>
 </html>

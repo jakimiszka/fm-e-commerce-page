@@ -20,6 +20,7 @@
 
     @include u.breakpoint(large){
         max-width: 1110px;
+
     }
 }
 
@@ -35,13 +36,19 @@
     pointer-events: none;
     visibility: visible;
     z-index: 5;
+
+    @include u.breakpoint(large){
+        visibility: hidden !important;
+    }
 }
 
 .main_content{
     width: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: u.$spacing-400;
+    margin-top: 2rem;
 
     @include u.breakpoint(medium){
         flex-direction: column;
@@ -50,6 +57,10 @@
     @include u.breakpoint(large){
         max-width: 1110px;
         flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        gap: u.$spacing-1200;
+        flex: 1;
     }
 }
 
@@ -58,6 +69,5 @@
     flex-direction: column;
     justify-content: center;
     gap: u.$spacing-200;
-    max-width: 445px;
     order: 1;
 }
