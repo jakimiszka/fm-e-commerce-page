@@ -48,6 +48,7 @@ function closeMenu(){
 function openMenu(){
     nav.style.display = 'flex';
     overlay.style.visibility = 'visible';
+    overlay.style.display = 'flex';
 };
 
 function toggleCart(){
@@ -85,6 +86,12 @@ function changeImage(delta){
         previewThumbnailsArray[newIndex].dataset.selected = 'true';
     }
 }
+
+window.addEventListener('resize', () => {
+    if (window.visualViewport.width < 1024){
+        closeGalleryPreview();
+    }
+})
 
 function galleryPreviewShow(){
     if (window.visualViewport.width < 1024){
@@ -127,7 +134,6 @@ function addToChart(){
             const itemListAfterArray = Array.from(itemListAfter);
             if (itemListAfterArray.length === 0){
                 cartEpmty.style.display = 'flex';
-                //cartChart.style.display = 'none';
                 cartItem.style.display = 'none';
             }
         })

@@ -25,6 +25,8 @@
 }
 
 .overlay {
+    display: none;
+    visibility: hidden;
     content: '';
     position: fixed;
     top: 0;
@@ -33,8 +35,12 @@
     bottom: 0;
     background-color: hsla(0, 0%, 0%, 0.8);
     pointer-events: none;
-    visibility: visible;
     z-index: 5;
+
+    @include u.breakpoint(medium){
+        display: none;
+        visibility: hidden;
+    }
 
     @include u.breakpoint(large){
         display: none;
@@ -62,12 +68,4 @@
         gap: u.$spacing-1200;
         flex: 1;
     }
-}
-
-.product-details{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: u.$spacing-200;
-    order: 1;
 }

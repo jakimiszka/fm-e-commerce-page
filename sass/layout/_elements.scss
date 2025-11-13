@@ -10,6 +10,18 @@
     padding: 1rem .5rem;
     width: 100%;
 
+    @include u.breakpoint(medium){
+        gap: 1rem;
+        padding: 1rem .5rem;
+        width: 50%;
+    }
+
+    @include u.breakpoint(large){
+        gap: 1rem;
+        padding: 1rem .5rem;
+        width: 40%;
+    }
+
     &--minus, &--plus {
         cursor: pointer;
         padding: 0;
@@ -24,11 +36,6 @@
         font-size: 1.2rem;
         color: var(--grey-950);
     }
-
-    @include u.breakpoint(large){
-        
-        
-    }
 }
 
 .chart_button{
@@ -41,9 +48,15 @@
     border-radius: 10px;
     padding: 1.1rem;
     font-size: 1rem;
-
+    flex: 1;
     width: 100%;
-    
+
+    @include u.breakpoint(large){
+        gap: 1rem;
+        padding: 1rem .5rem;
+        width: 40%;
+    }
+
     border: none;
     font-weight: bold;
     cursor: pointer;
@@ -85,11 +98,9 @@
     &--main_image{
         display: flex;
         align-items: center;
+        justify-content: center;
         img {
             width: 100%;
-            height: auto;
-            display: block;
-            // background-image: var(--image-url);
         }
 
         &--main{
@@ -100,20 +111,18 @@
             display: flex;
             gap: 1rem;
             margin-bottom: 1rem;
-            img{
-                height: 80%;
+            img {
+                max-width: 600px;
+                max-height: 600px;
             }
         }
     }
     &--thumbnails{
         display: none;
 
-        @include u.breakpoint(medium){
-            
-        }
-
         @include u.breakpoint(large){
             display: flex;
+            justify-content: center;
             gap: 1rem;
             width: 100%;
             height: 80%;
@@ -124,8 +133,8 @@
         flex: 1;
 
         img {
-            width: 100%;
-            height: 100%;
+            height: auto;
+            max-height: 140px;
             object-fit: cover;
         }
     }
@@ -143,8 +152,7 @@
     background-color: var(--white);
     border-radius: 10px;
     padding: 1rem;
-    
-    min-width: 320px;                   //  vary betweeb screen sizes  //
+    min-width: 320px;
     width: 80%;
     max-width: 400px;
     height: auto;
@@ -272,7 +280,7 @@
         z-index: 10;
 
         background-color: var(--white);
-        display: flex;
+        display: none;
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
@@ -364,6 +372,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    gap: u.$spacing-200;
+    order: 1;
     width: 80%;
 
     p{
@@ -426,53 +436,19 @@
 }
 
 .preview-container{
-    display: none;
-    position: absolute;
-    top:50%;
-    left: 50%;
-    z-index: 100;
-    transform: translate(-50%, -50%);
+        display: none;
+        position: absolute;
+        top:50%;
+        left: 50%;
+        z-index: 100;
+        transform: translate(-50%, -50%);
 }
 
 .gallery_preview{
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    width: 100%;
-    height: 100%;
-
-    position: absolute;
-    top:50%;
-    left: 50%;
-    z-index: 100;
-
-    transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.8);
-
-    &--main_image{
-        width: 500px;
-        height: 500px;
-        margin-bottom: 1rem;
-
-        img{
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-    }
-
-    &--thumbnails{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        gap: 1rem;
-
-        img{
-            width: 100px;
-            height: 100px;
-            object-fit: cover;
-        }
-    }
+        position: absolute;
+        top:50%;
+        left: 50%;
+        z-index: 100;
+        transform: translate(-50%, -50%);
+        background-color: rgba(0, 0, 0, 0.8);
 }
