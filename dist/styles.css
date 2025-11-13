@@ -281,7 +281,7 @@ ul {
   left: 50%;
   transform: translateX(-50%);
   z-index: 10;
-  display: flex;
+  display: none;
   flex-direction: column;
   background-color: var(--white);
   border-radius: 10px;
@@ -289,7 +289,7 @@ ul {
   min-width: 320px;
   width: 80%;
   max-width: 400px;
-  height: 256px;
+  height: auto;
   border: 1px solid var(--grey-100);
 }
 @media (min-width: 1024px) {
@@ -315,12 +315,14 @@ ul {
   text-align: center;
 }
 .cart--content--empty {
-  display: none;
+  display: flex;
+  padding: 2rem;
 }
 .cart--content--item {
-  display: flex;
+  display: none;
   align-items: center;
   gap: 1rem;
+  padding: 1rem;
 }
 .cart--content--item img {
   width: 50px;

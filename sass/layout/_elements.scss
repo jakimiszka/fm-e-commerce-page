@@ -133,12 +133,12 @@
 
 .cart{
     position: absolute;
-        top: 6rem;
-        left: 50%;
+    top: 6rem;
+    left: 50%;
     transform: translateX(-50%);
     
     z-index: 10;
-    display: flex;
+    display: none;
     flex-direction: column;
     background-color: var(--white);
     border-radius: 10px;
@@ -147,7 +147,7 @@
     min-width: 320px;                   //  vary betweeb screen sizes  //
     width: 80%;
     max-width: 400px;
-    height: 256px;
+    height: auto;
     border: 1px solid var(--grey-100);
 
     @include u.breakpoint(large){
@@ -174,13 +174,15 @@
         }
 
         &--empty{
-            display: none;
+            display: flex;
+            padding: 2rem;
         }
 
         &--item{
-            display: flex;
+            display: none;
             align-items: center;
             gap: 1rem;
+            padding: 1rem;
 
             img{
                 width: 50px;
