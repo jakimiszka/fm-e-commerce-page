@@ -2,6 +2,7 @@ const nav = document.querySelector('.navigation--links');
 const nav_close = document.querySelector('.navigation--links img');
 const nav_open = document.querySelector('.navigation--logo_menu');
 const overlay = document.querySelector('.overlay');
+const notification = document.querySelector('.notification');
 //cart
 const cartContent = document.querySelector('.cart--content');
 const cartItem = document.querySelector('.cart--content--item');
@@ -113,6 +114,11 @@ function closeGalleryPreview(){
     galleryPreview.style.display = 'none';
 }
 
+function getCartItems(){
+    const cartItems = cartContent.querySelectorAll('.cart--content--item');
+    return Array.from(cartItems);
+}
+
 function addToChart(){
     const quantity = Number(quantityValue.innerHTML);
     const shoePrice = Number(price.dataset.price);
@@ -126,15 +132,18 @@ function addToChart(){
         const id = Math.floor(Math.random() * 100)
         newItem.dataset.id = id;
         newItem.querySelector('.cart--content--item_delete').addEventListener('click', () => {
-            const itemList = cartContent.querySelectorAll('.cart--content--item');
-            const deleteItem = Array.from(itemList).find(item => item.dataset.id == id.toString());
+            const deleteItem = getCartItems().find(item => item.dataset.id == id.toString());
+            
             deleteItem.remove();
 
-            const itemListAfter = cartContent.querySelectorAll('.cart--content--item');
-            const itemListAfterArray = Array.from(itemListAfter);
+            const itemListAfterArray = getCartItems();
+            const itemsLen = itemListAfterArray.length;
+            notification.style.display = 'flex';
+            notification.innerHTML = itemsLen;
             if (itemListAfterArray.length === 0){
                 cartEpmty.style.display = 'flex';
                 cartItem.style.display = 'none';
+                notification.style.display = 'none';
             }
         })
 
@@ -142,6 +151,11 @@ function addToChart(){
         newItem.querySelector('.item_quantity').innerHTML = quantity;
         newItem.querySelector('.item_total_price').innerHTML = total;
         cartContent.appendChild(newItem);
+
+        const itemListArray = getCartItems();
+        const itemsLen = itemListArray.length;
+        notification.style.display = 'flex';
+        notification.innerHTML = itemsLen;
     }else{
         cartEpmty.style.display = 'flex';
         cartChart.style.display = 'flex';
@@ -149,6 +163,7 @@ function addToChart(){
     }
 }
 
+//listeners
 nextImageButton.addEventListener('click', () => changeImage(1));
 previousImageButton.addEventListener('click', () => changeImage(-1));
 if (previewNext) previewNext.addEventListener('click', () => changeImage(1));
@@ -161,5 +176,3 @@ galleryCloseButton.addEventListener('click', closeGalleryPreview);
 quantityMinus.addEventListener('click', () => changeQuantity(-1));
 quantityPlus.addEventListener('click', () => changeQuantity(1));
 addToCartButton.addEventListener('click', addToChart);
-
-

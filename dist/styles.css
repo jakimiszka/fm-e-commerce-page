@@ -219,7 +219,7 @@ ul {
   .chart_button {
     gap: 1rem;
     padding: 1rem 0.5rem;
-    width: 40%;
+    width: 100%;
   }
 }
 .chart_button:hover {
@@ -487,6 +487,28 @@ ul {
   width: 40px;
   height: 40px;
   border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid var(--orange-500);
+}
+
+.navigation--cart_icon {
+  width: 40px;
+  position: relative;
+}
+
+.notification {
+  position: absolute;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 16px;
+  height: 16px;
+  font-size: 12px;
+  color: var(--white);
+  background-color: var(--orange-500);
+  border-radius: 50%;
+  top: -8px;
+  right: 0;
 }
 
 .buttons_wrapper {
