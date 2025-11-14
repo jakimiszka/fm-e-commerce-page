@@ -157,9 +157,14 @@ function addToChart(){
         notification.style.display = 'flex';
         notification.innerHTML = itemsLen;
     }else{
-        cartEpmty.style.display = 'flex';
-        cartChart.style.display = 'flex';
-        cartItem.style.display = 'none';
+        const itemListAfterArray = getCartItems();
+        const itemsLen = itemListAfterArray.length;
+        if(itemsLen === 0){
+            cartEpmty.style.display = 'flex';
+            cartChart.style.display = 'flex';
+            cartItem.style.display = 'none';
+        }
+        
     }
 }
 
